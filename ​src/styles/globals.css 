@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * Rexus AI Core System Styling
+ * Strict Dark Mode Only
+ */
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --golden-accent: #ebd197;
+}
+
+/* Base Body Resets */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  
+  /* Critical constraint: Prevents scrollbars on the AI holographic view */
+  overflow: hidden; 
+  
+  /* Font smoothing for sharper, high-end feel */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Prevent pull-to-refresh and zooming on mobile browsers */
+  touch-action: none; 
+}
+
+/* Optional Custom Scrollbar Styling (just in case you add an overlay div that needs to scroll later) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--golden-accent);
+  border-radius: 4px;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
